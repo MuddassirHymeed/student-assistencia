@@ -79,7 +79,7 @@ app.use('/university', universityRoute)
 app.use('/student', studentRoute)
 // app.use('/user/register', userRoute)
 // server Connection
-const PORT = process.env.PORT || 80
+const PORT = process.env.PORT || 5478
 app.listen(PORT, () => {
     console.log(`listening on port ${PORT}`)
 }) 
