@@ -268,6 +268,7 @@ ul {
 img {
   vertical-align: middle;
   border: 0;
+  filter: invert(20%) sepia(10%) saturate(1000%) hue-rotate(180deg) brightness(100%);
 }
 
 a,
@@ -290,7 +291,7 @@ select:focus {
 }
 
 a:hover {
-  color: #ff8b3b;
+  color: #175689;
 }
 
 a.text-primary:hover {
@@ -378,7 +379,7 @@ a h4:hover {
 }
 
 .text-color {
-  color: #5c5c77;
+  color: black;
 }
 
 .text-light {
@@ -520,7 +521,7 @@ textarea.form-control {
   transition: transform .2s ease, -webkit-transform .2s ease;
   -webkit-transform-origin: top;
           transform-origin: top;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .top-header.hide {
@@ -538,19 +539,19 @@ textarea.form-control {
 }
 
 .navigation {
-  background-image: linear-gradient(to right, transparent 50%, #ff8b3b 50%);
+  background-image: linear-gradient(to right, transparent 50%, #175689 50%);
   transition: .2s ease;
 }
 
 @media (max-width: 575px) {
   .navigation {
-    background-image: linear-gradient(to right, transparent 70%, #ff8b3b 30%);
+    background-image: linear-gradient(to right, transparent 70%, #175689 30%);
   }
 }
 
 .navbar-nav {
   padding-left: 50px;
-  background: #ff8b3b;
+  background: #175689;
 }
 
 @media (max-width: 991px) {
