@@ -1,0 +1,101 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0 text-dark">Edit Program</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Edit Program</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+            <div class="row">
+                <div class="col-md-12">
+                    {{> home/formMsgs }}
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Add Program Data</h3>
+                        </div>
+                        <div class="card-body">
+                            <form action="/admin/program/update/{{programs.id}}" method="post" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label for="programName">Program Name (e.g Information Technology)</label>
+                                    <input type="text" class="form-control" value="{{programs.programName}}" name="programName" placeholder="Computer Science" required value="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="degreeCategory">Degree Category</label>
+                                    <select class="form-control" value="{{programs.degree}}" name="degreeCategory" id="" required>
+                                        <option value="" aria-readonly="true">Select Category</option>
+                                        {{#select programs.degree}}
+                                            {{#each degreeCategories}}
+                                                <option value={{_id}}>{{name}}</option>
+                                            {{/each}}
+                                        {{/select}}
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Description">Description</label>
+                                    <textarea name="description" class="form-control" placeholder="Program Description" required value="" id="" cols="30" rows="10">{{programs.description}}</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="requirements">Requirements</label>
+                                    <textarea name="requirement" class="form-control" placeholder="Requirements" required value="" id="" cols="30" rows="10">{{programs.requirement}}</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="costOfLiving">Cost of Living</label>
+                                    <textarea name="costOfLiving" class="form-control" placeholder="Cost of Living of that Area" required value="" id="" cols="30" rows="10">{{programs.costOfLiving}}</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="applicationDeadline">Application Deadline</label>
+                                    <input type="date" class="form-control" name="applicationDeadline" value="{{programs.applicationDeadline}}" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="universityLink">University Program Link</label>
+                                    <input type="text" class="form-control" name="universityLink" required value="{{programs.universityProgramLink}}" placeholder="University Program Link">
+                                </div>
+                                <div class="form-group">
+                                    <label for="programThumb">Thumbnail</label>
+                                    <input type="file" class="form-control" name="programThumb" value="{{programs.thumbnail}}" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="programFee">Program Fee (Rs.)</label>
+                                    <input type="text" class="form-control" name="programFee" required value="{{programs.programFee}}" placeholder="Program Fee">
+                                </div>
+                                <div class="form-group">
+                                    <label for="universityId">Select Program of University</label>
+                                    <select name="universityProgramName" value="{{programs.universityId}}" id="" class="form-control" required>
+                                        <option readonly>Select University</option>
+                                        {{#select programs.universityId}}
+                                        {{#each universities}}
+                                            <option value="{{_id}}">{{universityName}}</option>
+                                        {{/each}}
+                                        {{/select}}
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary">Add Program</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>

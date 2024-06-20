@@ -1,0 +1,20 @@
+{{#if success_message}}
+    <div class="alert alert-success success-message mt-1 mb-1 col-10 offset-md-1 p-1" style="margin-left: 0">
+        {{success_message}}
+    </div>
+{{/if}}
+{{#if error_message}}
+    <div class="alert alert-danger error-message mt-1 mb-1 col-10 offset-md-1 p-1" style="margin-left:0">
+        {{error_message}}
+    </div>
+{{/if}}
+{{#if error}}
+    <div class="alert alert-danger error-message mt-1 mb-1 col-10 offset-md-1 p-1" >
+        {{error}}
+    </div>
+{{/if}}
+{{#if message}}
+    <div class="alert alert-danger error-message mt-1 mb-1 col-10 offset-md-1 p-1" >
+        {{message}}
+    </div>
+{{/if}}

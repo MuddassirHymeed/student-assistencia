@@ -1,0 +1,120 @@
+ <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Add Program</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Add Program</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+          <div class="row">
+              <div class="col-md-12">
+                  {{> home/formMsgs }}
+              </div>
+          </div>
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+         <div class="col">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Upload CSV file</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-0">
+                <form action="/admin/program/addProgramFile" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <input type="file" class="form-control" name="fileCSV" accept=".csv">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Upload CSV File</button>
+                    </div>
+                </form>
+              </div>
+              <!-- /.card-body -->
+            </div>
+         </div>
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Add Program Data</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="/admin/program/addProgram" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="programName">Program Name (e.g Information Technology)</label>
+                                <input type="text" class="form-control" name="programName" placeholder="Computer Science" required value="">
+                            </div>
+                            <div class="form-group">
+                                <label for="degreeCategory">Degree Category</label>
+                                <select class="form-control" name="degreeCategory" id="" required>
+                                    <option value="" aria-readonly="true">Select Category</option>
+                                    {{#each degreeCategories}}
+                                    <option value={{_id}}>{{name}}</option>
+                                    {{/each}}
+                                </select>
+                                </div>
+                            <div class="form-group">
+                                <label for="Description">Description</label>
+                                <textarea name="description" class="form-control" placeholder="Program Description" required value="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="requirements">Requirements</label>
+                                <textarea name="requirement" class="form-control" placeholder="Requirements" required value="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="costOfLiving">Cost of Living</label>
+                                <textarea name="costOfLiving" class="form-control" placeholder="Cost of Living of that Area" required value="" id="" cols="30" rows="10"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="applicationDeadline">Application Deadline</label>
+                                <input type="date" class="form-control" name="applicationDeadline" value="" >
+                            </div>
+                            <div class="form-group">
+                                <label for="universityLink">University Program Link</label>
+                                <input type="text" class="form-control" name="universityLink" required value="" placeholder="University Program Link">
+                            </div>
+                            <div class="form-group">
+                                <label for="programThumb">Thumbnail</label>
+                                <input type="file" class="form-control" name="programThumb" required value="" >
+                            </div>
+                            <div class="form-group">
+                                <label for="programFee">Program Fee (Rs.)</label>
+                                <input type="text" class="form-control" name="programFee" required value="" placeholder="Program Fee">
+                            </div>
+                            <div class="form-group">
+                                <label for="universityId">Select Program of University</label>
+                                <select name="universityProgramName" id="" class="form-control" required>
+                                    <option readonly>Select University</option>
+                                    {{#each universities}}
+                                    <option value="{{_id}}">{{universityName}}</option>
+                                    {{/each}}
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary">Add Program</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>

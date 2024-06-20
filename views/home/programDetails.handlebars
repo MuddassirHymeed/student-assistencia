@@ -1,0 +1,102 @@
+<!-- page title -->
+<section class="page-title-section overlay" data-background="/home/images/backgrounds/page-title.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <ul class="list-inline custom-breadcrumb">
+                    <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="@@page-link">Search
+                        International Programs</a></li>
+                    <li class="list-inline-item text-white h3 font-secondary @@nasted"></li>
+                </ul>
+                <p class="text-lighten "><span class="total-program">{{totalProgram}}</span> Programmes are available.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /page title -->
+
+<!-- about -->
+<section class="section">
+    <div class="container">
+        <div class="row">
+            {{#each program}}
+                <div class="col-lg-8">
+                    <h2>{{programName}}</h2>
+                    <p>{{universityId.universityName}}</p>
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home"
+                               role="tab" aria-controls="nav-home" aria-selected="true">Overview</a>
+                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
+                               role="tab" aria-controls="nav-profile" aria-selected="false">Cost of Living</a>
+                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+                               role="tab" aria-controls="nav-contact" aria-selected="false">Requirements</a>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                             aria-labelledby="nav-home-tab">
+                            <div class="row tab-content-line1">
+                                <span class="row-heading">Degree</span> <span
+                                    class="row-content text-white">{{degree.name}}</span>
+                            </div>
+                            <div class="row tab-content-line2">
+                                <span class="row-heading">Program Fee</span> <span
+                                    class="row-content ">{{programFee}}</span>
+                            </div>
+                            <div class="row tab-content-line1">
+                                <span class="row-heading">Application Deadline</span> <span
+                                    class="row-content text-white">{{applicationDeadline}}</span>
+                            </div>
+                            <div class="row tab-content-line2">
+                                <span class="row-heading">Program Link</span> <span
+                                    class="row-content "><a href="{{universityProgramLink}}">{{programName}}</a></span>
+                            </div>
+                            <div class="row tab-content-line1">
+                                <span class="row-heading">Description</span> <span
+                                    class="row-content text-white">{{description}}</span>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <div class="row">
+                                <div class="text-box">
+                                    {{costOfLiving}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            <div class="row">
+                                <div class="text-box">
+                                    {{requirement}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="text-box">
+                        <h4>Contact Details</h4>
+                         {{#if universityId.addressLine1 }}
+                        <li>{{universityId.addressLine1}}</li>
+                         {{/if}}
+                        {{#if universityId.addressLine2 }}
+                        <li>{{universityId.addressLine2}}</li>
+                        {{/if}}
+                        {{#if universityId.city }}
+                        <li>{{universityId.city}}</li>
+                        {{/if}}
+                        {{#if universityId.province }}
+                        <li>{{universityId.province}}</li>
+                        {{/if}}
+                        <div class="apply-btn m-5">
+                            <a href="/apply/{{universityId._id}}/{{_id}}" class="btn btn-primary">Apply Here</a>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</section>
+<!-- /about -->
+

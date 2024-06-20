@@ -1,0 +1,94 @@
+/* Register Model Style */
+.Error{
+    color: #fd7e14;
+    font-weight: 400;
+}
+.error-message{
+    background: rgb(253, 126, 20, 0.8); 
+    color:#fff; 
+    border-radius: 1px;
+}
+.success-message{
+    background: rgb(2, 137, 16, 0.8); 
+    color:#fff; 
+    border-radius: 1px;
+}
+.user-image{
+    /* width: 800px; */
+    height: 100vh;
+}
+/* For login page */
+#userRegistration .login-user{
+    padding-top: 10rem !important;
+}
+.program .program-text a{
+    color: #1e1e4b;
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 20px;
+}
+.search-card .card-header{
+    background: #1A1A37;
+    color: #fff;
+}
+.nav-tab{
+    height: 40px !important;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link{
+    color: #1A1A37 !important;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link:active{
+    color: #FF8B3B !important;
+    border-color: #FF8B3B !important;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link:focus{
+    color: #FF8B3B !important;
+    border-color: #FF8B3B !important;
+}
+.tab-content-line1{
+    margin-top: 21px;
+    background: #ccc;
+    padding: 5px 0px 5px 23px;
+    border-radius: 2px;
+}
+.tab-content-line1 .row-heading {
+    margin-right: 126px;
+    font-size: 20px;
+    color: #1E1E4B;
+}
+.tab-content-line1 .row-content {
+    font-size: 20px;
+}
+.tab-content-line2{
+    margin-top: 21px;
+    background: #fff;
+    padding: 5px 0px 5px 23px;
+    border-radius: 2px;
+}
+.tab-content-line2 .row-heading {
+    margin-right: 70px;
+    font-size: 20px;
+    color: #1E1E4B;
+}
+.tab-content-line2 .row-content {
+    font-size: 20px;
+}
+.text-box{
+    background: #ccc;
+    color: #fff;
+    padding: 13px 25px 13px 25px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+.card-text {
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

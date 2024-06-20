@@ -1,0 +1,39 @@
+<!-- page title -->
+<section class="page-title-section overlay" data-background="/home/images/backgrounds/page-title.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <ul class="list-inline custom-breadcrumb">
+                    <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="@@page-link">
+                        Select Scholarship by University</a></li>
+                    <li class="list-inline-item text-white h3 font-secondary @@nasted"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /page title -->
+
+<!-- about -->
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <table class="table table-responsive table-bordered">
+                    <thead>
+                        <th>University Name</th>
+                    </thead>
+                    <tbody>
+                        {{#each universities}}
+                        <tr>
+                            <td><a href="/universityScholarship/{{_id}}">{{universityName}}</a></td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /about -->

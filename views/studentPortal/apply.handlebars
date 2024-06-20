@@ -1,0 +1,198 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0 text-dark">Apply From here</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Apply</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+            <div class="row">
+                <div class="col-md-12">
+                    {{> home/formMsgs }}
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <!-- Small boxes (Stat box) -->
+            <div class="row mb-2">
+                <div class="col">
+                    <div class="block">
+                        <div class="block-row mb-2">
+                            <span class="badge badge-primary">University: </span> {{universityName}}
+                        </div>
+                        <div class="block-row mb-2">
+                            <span class="badge badge-primary">Program: </span> {{programName}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Personal Details</h3>
+                        </div>
+                        <div class="card-body">
+                            <form action="/student/apply" method="post" enctype="multipart/form-data">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="full-name">Full Name: </label>
+                                            <input type="text" id="full-name" class="form-control" name="fullName" placeholder="Full Name" required value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="cnic">CNIC: </label>
+                                            <input type="text" id="cnic" class="form-control cnic" maxlength="13" name="cnic" placeholder="3520274653431" required value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="fatherName">Father Name: </label>
+                                            <input type="text" id="fatherName" class="form-control" name="fatherName" placeholder="Father Full Name" required value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="fatherCnic">Father CNIC: </label>
+                                            <input type="text" id="fatherCnic" class="form-control cnic" maxlength="13" name="fatherCnic" placeholder="3520274653431" required value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="currentAddress">Current Address: </label>
+                                            <input type="text" id="currentAddress" class="form-control" name="currentAddress" placeholder="Current Address" required value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="permanentAddress">Permanent Address: </label>
+                                            <input type="text" id="permanentAddress" class="form-control" name="permanentAddress" placeholder="Permanent Address" required value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="phone">Phone: </label>
+                                            <input type="text" id="phone" class="form-control phone" name="phone" placeholder="Phone Number" required value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="alternatePhone">Alternate Phone: </label>
+                                            <input type="text" id="alternatePhone" class="form-control phone" name="alternatePhone" placeholder="Alternate Phone" required value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="h4">Educational Details</div>
+                                    <hr>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="metricTotalMarks">Metric or Equivalent Total Marks: </label>
+                                            <input type="number" id="metricTotalMarks" class="form-control" placeholder="Total Marks" name="metricTotalMarks" required value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="metricObtainedMarks">Metric or Equivalent Obtained Marks: </label>
+                                            <input type="number" id="metricObtainedMarks" class="form-control" placeholder="Obtained Marks" name="metricObtainedMarks" required value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="interTotalMarks">Intermediate Total Marks: </label>
+                                            <input type="number" id="interTotalMarks" class="form-control" placeholder="Total Marks" name="interTotalMarks" required value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="interObtainedMarks">Intermediate Obtained Marks: </label>
+                                            <input type="number" id="interObtainedMarks" class="form-control" placeholder="Obtained Marks" name="interObtainedMarks" required value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="bachelorsObtainedCgpa">Bachelors CGPA: </label>
+                                            <input type="number" id="bachelorsObtainedCgpa" class="form-control" placeholder="Bachelors CGPA" name="bachelorsObtainedCgpa" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="masterObtainedCgpa">Master Obtained Marks: </label>
+                                            <input type="number" id="masterObtainedCgpa" class="form-control" placeholder="Master CGPA" name="masterObtainedCgpa" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="h4">Academic Documents</div>
+                                    <hr>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="metricFile">Metric or Equivalent: </label>
+                                            <input type="file" id="metricFile" class="form-control" name="metricFile" required value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="interFile">Intermediate or Equivalent(O/A Levels/ DAE): </label>
+                                            <input type="file" id="interFile" class="form-control" name="interFile" required value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="bachelorsFile">Bachelors (BS/BA/B.Com/BBA): </label>
+                                            <input type="file" id="bachelorsFile" class="form-control" name="bachelorsFile" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="masterFile">Master or Equivalent: </label>
+                                            <input type="file" id="masterFile" class="form-control" name="masterFile" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary">Apply</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+<script>
+
+</script>

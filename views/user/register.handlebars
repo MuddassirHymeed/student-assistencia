@@ -1,0 +1,47 @@
+<section id="userRegistration">
+    <div class="row">
+        <div class="col-md-7">
+            <div class="registerImage">
+                <img src="/home/images/register.jpg" alt="Register Image here" class="user-image" style="width: 800px;">
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="login mt-5">
+                <div class="col-10 offset-md-1 mb-1">
+                    <h2>Sign Up</h2>
+                    {{#each errors}}
+                        <div class="error-message mb-1 col-10 offset-md-1 p-1" style="">{{message}}</div>
+                    {{/each}}
+                </div>
+                <form action="/user/registerStudent" method="post" class="row">
+                    <div class="col-10 offset-md-1 mb-2 mt-1">
+                        <input type="email" class="form-control mb-1" value="{{email}}" id="email" name="email" value=""
+                            placeholder="someone@example.com">
+                        <span id="emailError" class="Error"></span>
+                    </div>
+                    <div class="col-10 offset-md-1 mb-2">
+                        <input type="text" class="form-control mt-2 mb-1" id="username" value="{{username}}" name="username" value=""
+                            placeholder="Username">
+                        <span id="usernameError" class="Error"></span>
+                    </div>
+                    <div class="col-10 offset-md-1 mb-2">
+                        <input type="password" class="form-control mt-2 mb-1" id="password" name="password" value=""
+                            placeholder="Password">
+                        <span id="passwordError" class="Error"></span>
+                    </div>
+                    <div class="col-10 offset-md-1 mb-2">
+                        <input type="password" class="form-control mt-2 mb-1" id="confirmPassword"
+                            name="confirmPassword" value="" placeholder="Confirm Password">
+                        <span id="confirmPasswordError" class="Error"></span>
+                    </div>
+                    <div class="col-10 offset-md-1 mt-3 mb-1">
+                        <button type="submit" class="btn btn-primary" id="registerStudentButton">SIGN UP</button>
+                    </div>
+                    <div class="col-10 offset-md-1">
+                        <a href="/login">Already have account?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

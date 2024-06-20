@@ -1,0 +1,49 @@
+{
+  "name": "student-assistencia",
+  "version": "1.0.0",
+  "description": "Final Year Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wasay048/student-assistencia.git"
+  },
+  "keywords": [
+    "Online",
+    "Apply",
+    "to",
+    "Univeristy"
+  ],
+  "author": "Abdul Wasay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wasay048/student-assistencia/issues"
+  },
+  "homepage": "https://github.com/wasay048/student-assistencia",
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.3",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.5",
+    "csv-parse": "^4.12.0",
+    "csv-parser": "^2.3.3",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.0",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.0",
+    "fast-csv": "^4.3.2",
+    "handlebars": "^4.7.6",
+    "http": "0.0.0",
+    "moment": "^2.29.1",
+    "mongoose": "^5.9.3",
+    "multer": "^1.4.2",
+    "neat-csv": "^5.2.0",
+    "nodemon": "^2.0.2",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  }
+}

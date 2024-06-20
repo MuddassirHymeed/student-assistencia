@@ -1,0 +1,125 @@
+<!-- page title -->
+<section class="page-title-section overlay" data-background="/home/images/backgrounds/page-title.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <ul class="list-inline custom-breadcrumb">
+                    <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="@@page-link">Search
+                        International Programs</a></li>
+                    <li class="list-inline-item text-white h3 font-secondary @@nasted"></li>
+                </ul>
+                <p class="text-lighten "><span class="total-program">{{totalProgram}}</span> Programmes are available.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /page title -->
+
+<!-- about -->
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="search-card card">
+                    <div class="card-header text-center">
+                        Choose your programme!
+                    </div>
+                    <div class="card-body">
+                        <form action="/search" method="post">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Search Program"
+                                               onblur="Search.searchProgram()" id="searchText" name="searchProgram">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="category">Course Type</label>
+                                        <select name="category" id="category" class="form-control"
+                                                onblur="Search.searchProgram()">
+                                            <option readonly value="null">Select Category</option>
+                                            {{#each degreeCategories}}
+                                                <option value="{{_id}}">{{name}}</option>
+                                            {{/each}}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="city">City</label>
+                                        <select name="city" id="city" class="form-control"
+                                                onblur="Search.searchProgram()">
+                                            <option readonly value="null">Select City</option>
+                                            <option value="lahore">Lahore</option>
+                                            <option value="Islamabad">Islamabad</option>
+                                            <option value=Karachi"">Karachi</option>
+                                            <option value="Abbottabad">Abbottabad</option>
+                                            <option value="Peshawar">Peshawar</option>
+                                            <option value="Chiniot">Chiniot</option>
+                                            <option value="Faisalabad">Faisalabad</option>
+                                            <option value="Sukkur">Sukkur</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="university">Institution</label>
+                                        <select name="university" id="university" class="form-control"
+                                                onblur="Search.searchProgram()">
+                                            <option readonly value="null">Select University</option>
+                                            {{#each universities}}
+                                                <option value="{{_id}}">{{universityName}}</option>
+                                            {{/each}}
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="submit" class="btn btn-primary" id="searchProgram" value="Search">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <!-- blog post -->
+                <div class="row" id="search-data">
+                    {{#if programs}}
+                        {{#each programs}}
+                            <article class="col-lg-6 ">
+                                <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
+                                    <img class="card-img-top rounded-0" src="/uploads/images/programs/{{thumbnail}}"
+                                         alt="Post thumb">
+                                    <div class="card-body">
+                                        <!-- post meta -->
+                                        <ul class="list-inline mb-3">
+                                            <!-- post date -->
+                                            <li class="list-inline-item mr-3 ml-0"><h4>Deadline</h4></li>
+
+                                            <li class="list-inline-item mr-3 ml-0">{{applicationDeadline}}</li>
+                                        </ul>
+                                        <a href="/program/{{_id}}">
+                                            <h4 class="card-title">{{programName}}</h4>
+                                        </a>
+                                        <p class="card-text">{{universityId.universityName}}</p>
+                                        <a href="/program/{{_id}}" class="btn btn-primary btn-sm">Read More</a>
+                                    </div>
+                                </div>
+                            </article>
+                        {{/each}}
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /about -->
+

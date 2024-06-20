@@ -1,0 +1,85 @@
+ <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Degree Programs</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Degree Programs Programs</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+          <div class="row">
+              <div class="col-md-12">
+                  {{> home/formMsgs }}
+              </div>
+          </div>
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+         <div class="col">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Filter</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-0" style="overflow: auto; height:30em; width: 100%; white-space: nowrap;">
+                <table class="table table-sm table-responsive-md table-striped table-bordered" >
+                  <thead>
+                    <tr>
+                        <th>Delete</th>
+                        <th>Edit</th>
+                      <th >Program Name</th>
+                      <th>Degree Category</th>
+                      <th >Description</th>
+                      <th >Requirements</th>
+                      <th >Cost of Living</th>
+                      <th>Application Deadline</th>
+                      <th >Program Link</th>
+                      <th>Thumbnail</th>
+                      <th>Program Fee</th>
+                      <th>University</th>
+                      <th >Registered at</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {{#each programs}}
+                    <tr>
+                        <td><span class="badge bg-danger"><a href="/admin/program/delete/{{id}}">Delete</a></span></td>
+                        <td><span class="badge bg-success"><a href="/admin/program/edit/{{id}}">Edit</a></span></td>
+                      <td>{{programName}}</td>
+                      <td>{{degree.name}}</td>
+                      <td>{{description}}</td>
+                      <td>{{requirement}}</td>
+                      <td>{{costOfLiving}}</td>
+                      <td>{{applicationDeadline}}</td>
+                      <td>{{universityProgramLink}}</td>
+                      <td><img src="/uploads/images/programs/{{thumbnail}}" width="100" height="100" alt=""></td>
+                      <td>{{programFee}}</td>
+                      <td>{{universityId.universityName}}</td>
+                      <td>{{registeredDate}}</td>
+                    </tr>
+                    {{/each}}
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+         </div>
+        </div>
+        <!-- /.row -->
+        
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>

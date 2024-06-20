@@ -1,0 +1,69 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0 text-dark">Add Scholarship</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Add Scholarship</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+            <div class="row">
+                <div class="col-md-12">
+                    {{> home/formMsgs }}
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <!-- Small boxes (Stat box) -->
+            <!-- /.row -->
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Add Scholarship</h3>
+                        </div>
+                        <div class="card-body">
+                            {{#each errors}}
+                                <div class="error-message mb-1 col-10 offset-md-1 p-1" style="color: #ff253a; margin: 0px !important">{{message}}</div>
+                            {{/each}}
+                            <form action="/admin/addSchlarships" method="post" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" class="form-control" name="name" placeholder="Title Here" required value="{{name}}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="description">Description</label>
+                                    <textarea name="description" class="form-control" placeholder="Scholarship Description" required value="" id="" cols="30" rows="10"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="universityId">Select University</label>
+                                    <select name="universityId" id="universityId" class="form-control" required>
+                                        <option readonly>Select University</option>
+                                        {{#each universities}}
+                                            <option value="{{_id}}">{{universityName}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>

@@ -1,0 +1,37 @@
+<section id="userRegistration">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="login-user mt-10">
+                <div class="col-10 offset-md-1 mb-1">
+                    <h2>Login</h2>
+                    {{> home/formMsgs }}
+                    {{#each errors}}
+                        <div class="error-message mb-1 col-10 offset-md-1 p-1" style="">{{message}}</div>
+                    {{/each}}
+                </div>
+
+                <form action="/user/loginUser" method="post" class="row">
+                    <div class="col-10 offset-md-1 mb-2">
+                        <input type="text" class="form-control mt-2 mb-1" id="username" value="{{username}}" name="username" value=""
+                            placeholder="Username">
+                    </div>
+                    <div class="col-10 offset-md-1 mb-2">
+                        <input type="password" class="form-control mt-2 mb-1" id="password" name="password" value=""
+                            placeholder="Password">
+                    </div>
+                    <div class="col-10 offset-md-1 mt-3 mb-1">
+                        <button type="submit" class="btn btn-primary" id="registerStudentButton">SIGN IN</button>
+                    </div>
+                    <div class="col-10 offset-md-1">
+                        <a href="/user/register">Not Yet Registered?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="registerImage">
+                <img src="/home/images/login.jpg" alt="Register Image here" style="" class="user-image">
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,103 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0 text-dark">View All Applications</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">View Applications</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <!-- Small boxes (Stat box) -->
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Filter</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body p-0" style="overflow: auto; height:30em; width: 100%; white-space: nowrap;">
+                            <table class="table table-sm table-responsive-md" >
+                                <thead>
+                                <tr>
+                                    <th>Delete</th>
+                                    <th>Full Name</th>
+                                    <th>CNIC</th>
+                                    <th>Father Name</th>
+                                    <th>Father CNIC</th>
+                                    <th>Current Address</th>
+                                    <th>Permanent Address</th>
+                                    <th >Phone</th>
+                                    <th>Alternate Phone</th>
+                                    <th>Metric Total Marks</th>
+                                    <th>Metric Obtained Marks</th>
+                                    <th>Inter Total Marks</th>
+                                    <th>Inter Obtained Marks</th>
+                                    <th>Bachelors Data</th>
+                                    <th>Master Data</th>
+                                    <th>Metric File</th>
+                                    <th>Inter File</th>
+                                    <th>Bachelors File</th>
+                                    <th>Master File</th>
+                                    <th>University</th>
+                                    <th>Program Name</th>
+                                    <th>Registered at</th>
+                                    <th>Progress</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {{#each applications}}
+                                    <tr>
+                                        <td><span class="badge bg-danger"><a href="/admin/program/delete/{{id}}">Delete</a></span></td>
+                                        <td>{{fullName}}</td>
+                                        <td>{{cnic}}</td>
+                                        <td>{{fatherName}}</td>
+                                        <td>{{fatherCnic}}</td>
+                                        <td>{{currentAddress}}</td>
+                                        <td>{{permanentAddress}}</td>
+                                        <td>{{phone}}</td>
+                                        <td>{{alternatePhone}}</td>
+                                        <td>{{metricTotalMarks}}</td>
+                                        <td>{{metricObtainedMarks}}</td>
+                                        <td>{{interTotalMarks}}</td>
+                                        <td>{{interObtainedMarks}}</td>
+                                        <td>{{bachelorsObtainedCgpa}}</td>
+                                        <td>{{masterObtainedCgpa}}</td>
+                                        <td>{{metricFile}}</td>
+                                        <td>{{interFile}}</td>
+                                        <td>{{bachelorsFile}}</td>
+                                        <td>{{masterFile}}</td>
+                                        <td>{{universityId.universityName}}</td>
+                                        <td>{{programId.programName}}</td>
+                                        <td>{{registerDate}}</td>
+                                        <td>{{applicationProgress}}</td>
+                                        <td><span class="badge bg-danger"><a href="/university/inProgress/{{id}}">InProgress</a></span></td>
+                                    </tr>
+                                {{/each}}
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                </div>
+
+                <!-- ./col -->
+            </div>
+            <!-- /.row -->
+
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
