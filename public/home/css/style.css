@@ -265,9 +265,15 @@ ul {
   margin: 0px;
 }
 
-img {
+.navbar-brand {
   vertical-align: middle;
   border: 0;
+  filter: invert(20%) sepia(10%) saturate(1000%) hue-rotate(180deg) brightness(100%);
+}
+
+.logo-footer {
+  max-width: 100%;
+  height: auto;
   filter: invert(20%) sepia(10%) saturate(1000%) hue-rotate(180deg) brightness(100%);
 }
 
