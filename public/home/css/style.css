@@ -158,19 +158,19 @@ h6, .h6 {
 }
 
 .btn-primary {
-  background: #F49722;
+  background: #FFAB08;
   color: black;
   font-size: 18px;
   font-weight: 500;
 }
 
 .btn-primary::before {
-  background: white;
+  background: black;
 }
 
 .btn-primary:active {
-  background: #ff8b3b !important;
-  color: #ff8b3b;
+  background: #FFAB08 !important;
+  color: #FFAB08;
 }
 
 .btn-primary:active::before {
@@ -179,7 +179,7 @@ h6, .h6 {
 
 .btn-primary:hover {
   background: #ffab08;
-  color: #ff8b3b;
+  color: white;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active,
@@ -313,7 +313,7 @@ a:hover {
 }
 
 a.text-primary:hover {
-  color: #ff8b3b !important;
+  color: white !important;
 }
 
 a.text-light:hover {
@@ -393,7 +393,7 @@ a h4:hover {
 }
 
 .text-primary {
-  color: #1DAF2A !important;
+  color: #23A9C9 !important;
 }
 .ti-face{
   color: #1DAF2A !important;
