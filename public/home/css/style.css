@@ -213,8 +213,8 @@ h6, .h6 {
 }
 
 .btn-primary-outline {
-  border: 1px solid #ff8b3b;
-  color: #ff8b3b;
+  border: 1px solid #F49722;
+  color:black;
   background: transparent;
 }
 
@@ -223,8 +223,8 @@ h6, .h6 {
 }
 
 .btn-primary-outline:hover {
-  background: #ff8b3b;
-  color: #ff8b3b;
+  background: #F49722;
+  color: black;
 }
 
 .btn-primary-outline:active {
@@ -298,6 +298,16 @@ select:focus {
   outline: 0;
 }
 
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+  margin-top: 20px;
+}
+
+
+
+
 a:hover {
   color: #23A9C9;
 }
@@ -343,7 +353,7 @@ a h4:hover {
 }
 
 .border-primary {
-  border-color: #ededf1 !important;
+  border-color: #23A9C9 !important;
 }
 
 /* overlay */
@@ -420,6 +430,12 @@ a h4:hover {
 
   font-size: 16px;
   color: black;
+}
+
+
+.text-nowrap{
+  font-size: 41px !important;
+  color: #23A9C9;
 }
 .mb-2{
   font-size: 17px;
@@ -816,7 +832,7 @@ link:focus,
 /* banner feature */
 .feature-icon {
   font-size: 50px;
-  color: #ff8b3b;
+  color: #23A9C9;
   display: inline-block;
 }
 
@@ -900,8 +916,8 @@ link:focus,
   height: 80px;
   width: 80px;
   border-radius: 50%;
-  background: #ff8b3b;
-  color: #fff;
+  background: #FFAB08;
+  color: black;
   font-size: 20px;
   text-align: center;
 }
@@ -917,7 +933,7 @@ link:focus,
   width: 0;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background: #fff;
+  background: black;;
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -933,7 +949,7 @@ link:focus,
   width: 80%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background: #ff8b3b;
+  background: white;
   border-radius: 50%;
   top: 50%;
   left: 50%;
