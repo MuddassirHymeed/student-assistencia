@@ -69,4 +69,13 @@ router.get('/viewApplications', (req, res) => {
            res.render("studentPortal/viewApplications", {username: req.user.username, applications: applications})
         })
 })
+router.get('/application/delete/:id', (req, res) => {
+    Application.findByIdAndDelete({_id: req.params.id}, (err, ApplicationDeleted) => {
+        if (err) throw err;
+        if (ApplicationDeleted) {
+            req.flash("error_message", "Application has deleted")
+            res.redirect('/student/viewApplications')
+        }
+    })
+})
 module.exports = router

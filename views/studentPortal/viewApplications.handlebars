@@ -33,7 +33,7 @@
                                 <thead>
                                 <tr>
                                     <th>Delete</th>
-                                    <th>Edit</th>
+                                    {{!-- <th>Edit</th> --}}
                                     <th>Full Name</th>
                                     <th>CNIC</th>
                                     <th>Father Name</th>
@@ -61,8 +61,8 @@
                                 <tbody>
                                 {{#each applications}}
                                     <tr>
-                                        <td><span class="badge bg-danger"><a href="/admin/program/delete/{{id}}">Delete</a></span></td>
-                                        <td><span class="badge bg-success"><a href="/admin/program/edit/{{id}}">Edit</a></span></td>
+                                        <td><span class="badge bg-danger"><a href="/student/application/delete/{{id}}">Delete</a></span></td>
+                                        {{!-- <td><span class="badge bg-success"><a href="/admin/program/edit/{{id}}">Edit</a></span></td> --}}
                                         <td>{{fullName}}</td>
                                         <td>{{cnic}}</td>
                                         <td>{{fatherName}}</td>
