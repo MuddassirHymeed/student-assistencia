@@ -143,4 +143,15 @@ router.get('/delete/:id', (req, res) => {
         }
     })
 })
+
+
+router.get('/allApplications/delete/:id', (req, res) => {
+    Application.findByIdAndDelete({_id: req.params.id}, (err, ApplicationDeleted) => {
+        if (err) throw err;
+        if (ApplicationDeleted) {
+            req.flash("error_message", "Application has deleted")
+            res.redirect('/university/allApplications')
+        }
+    })
+})
 module.exports = router
