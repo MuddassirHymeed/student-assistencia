@@ -46,40 +46,48 @@
     border-color: #FF8B3B !important;
 }
 .tab-content-line1{
-    margin-top: 21px;
-    background: #ccc;
-    padding: 5px 0px 5px 23px;
+    margin-top: 24px;
+    background: #010101;
+    padding: 5px 0px 5px 17px;
     border-radius: 2px;
 }
 .tab-content-line1 .row-heading {
     margin-right: 126px;
-    font-size: 20px;
-    color: #1E1E4B;
+    font-size: 21px;
+    color: white;
 }
 .tab-content-line1 .row-content {
-    font-size: 20px;
+    font-size: 18px;
+    word-spacing: 2px;
+    line-height: 1.6;
+    line-break:inherit;
+    /* text-align:center; */
+    /* text-indent: 1.1em; */
 }
 .tab-content-line2{
     margin-top: 21px;
-    background: #fff;
+    background: #010101;
     padding: 5px 0px 5px 23px;
     border-radius: 2px;
 }
 .tab-content-line2 .row-heading {
     margin-right: 70px;
     font-size: 20px;
-    color: #1E1E4B;
+    color: white;
 }
 .tab-content-line2 .row-content {
     font-size: 20px;
 }
 .text-box{
-    background: #ccc;
-    color: #fff;
-    padding: 13px 25px 13px 25px;
+    background: #010101;
+    color: #249DBD;
+    padding: 13px 25px 13px 17px;
     border-radius: 5px;
-    margin-top: 20px;
-    font-size: 20px;
+    margin-top: 24px;
+    font-size: 18px;
+    word-spacing: 2px;
+    line-height: 1.6;
+    line-break:inherit;
 }
 .card-img-top {
     width: 100%;
