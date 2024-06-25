@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wasay048/student-assistencia.git"
+    "url": "https://github.com/MuddassirHymeed/student-assistencia"
   },
   "keywords": [
     "Online",
@@ -17,12 +17,12 @@
     "to",
     "Univeristy"
   ],
-  "author": "Abdul Wasay",
+  "author": "Muddassir Hymeed",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wasay048/student-assistencia/issues"
+    "url": "https://github.com/MuddassirHymeed/student-assistencia/issues"
   },
-  "homepage": "https://github.com/wasay048/student-assistencia",
+  "homepage": "https://github.com/MuddassirHymeed/student-assistencia",
   "dependencies": {
     "@handlebars/allow-prototype-access": "^1.0.3",
     "bcryptjs": "^2.4.3",
