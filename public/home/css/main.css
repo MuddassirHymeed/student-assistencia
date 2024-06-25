@@ -30,6 +30,7 @@
 .search-card .card-header{
     background: #23A9C9;
     color: black;
+    font-size: 18px;
 }
 .nav-tab{
     height: 40px !important;
