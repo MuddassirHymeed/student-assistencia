@@ -25,6 +25,8 @@ Follow these steps to set up the project locally:
 
 4. **Start the Project with local Server**
     - `nodemon app.js`
+      `node app.js`
+      `npm run server`
 
 ## Usage
 5. **Access the application**:
